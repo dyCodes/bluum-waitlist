@@ -72,7 +72,7 @@ button {
 	line-height: 0;
 }
 .logo__img {
-	height: 2.2rem;
+	height: 2.125rem;
 }
 
 .hero {
@@ -125,7 +125,7 @@ button {
 }
 .hero__form-group {
 	position: relative;
-	max-width: 500px;
+	max-width: 480px;
 	display: flex;
 	align-items: center;
 	background-color: #fff;
@@ -135,7 +135,7 @@ button {
 
 .hero__form-input {
 	width: 100%;
-	padding: 18px 16px;
+	padding: 19px 16px;
 	padding-right: 114px;
 	border: none;
 	border-radius: 8px;
@@ -155,7 +155,7 @@ button {
 	border: none;
 	border-radius: 8px;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 14px;
 }
 
 /* Responsive */
@@ -176,7 +176,7 @@ button {
 	}
 	.hero__text {
 		width: 49%;
-		max-width: 584px;
+		max-width: 540px;
 	}
 	.hero__image {
 		margin-top: 0;
@@ -195,8 +195,8 @@ button {
 		line-height: 64px;
 	}
 	.hero__subtitle {
-		font-size: 1.25rem;
-		line-height: 30px;
+		font-size: 1.125rem;
+		line-height: 28px;
 	}
 }
 
@@ -207,7 +207,7 @@ button {
 	}
 
 	.logo__img {
-		height: 2.5rem;
+		height: 36px;
 	}
 	.hero__image {
 		width: 46%;
