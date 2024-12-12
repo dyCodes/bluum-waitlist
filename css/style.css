@@ -108,14 +108,14 @@ button {
 }
 
 .hero__title {
-	font-size: 37px;
+	font-size: 2.3125rem;
 	font-weight: 500;
 	line-height: 48px;
 }
 .hero__subtitle {
 	color: rgba(79, 79, 79, 1);
 	margin-top: 12px;
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-weight: 400;
 	line-height: 28px;
 }
@@ -155,7 +155,7 @@ button {
 	border: none;
 	border-radius: 8px;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 /* Responsive */
@@ -176,6 +176,7 @@ button {
 	}
 	.hero__text {
 		width: 49%;
+		max-width: 584px;
 	}
 	.hero__image {
 		margin-top: 0;
@@ -190,11 +191,11 @@ button {
 	}
 
 	.hero__title {
-		font-size: 53px;
+		font-size: 3.3125rem;
 		line-height: 64px;
 	}
 	.hero__subtitle {
-		font-size: 20px;
+		font-size: 1.25rem;
 		line-height: 30px;
 	}
 }
@@ -216,18 +217,24 @@ button {
 
 @media (min-width: 1360px) {
 	.container {
-		padding: 0 24px;
+		padding: 0 2rem;
 	}
 
 	.hero {
 		padding-top: 4rem;
 	}
 	.hero__title {
-		font-size: 60px;
-		line-height: 72px;
+		font-size: 3.75rem;
+		line-height: 4.5rem;
 	}
 	.hero__image {
-		width: 46%;
-		max-width: 580px;
+		width: 48%;
+		max-width: 590px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.container {
+		max-width: 1400px;
 	}
 }
