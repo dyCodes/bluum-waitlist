@@ -22,11 +22,6 @@ a {
 	color: inherit;
 }
 
-ul,
-ol {
-	list-style: none;
-}
-
 h1,
 h2,
 h3,
@@ -46,7 +41,7 @@ img {
 .container {
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 24px;
 }
 
 .flex {
@@ -73,44 +68,48 @@ img {
 .hero {
 	background-color: var(--secondary-color);
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 4rem;
+	padding-top: 8rem;
+	overflow: hidden;
 }
 
 .hero__content {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: column;
 }
 
-.hero__text {
-	width: 50%;
-}
+/* .hero__text {} */
+
 .hero__image {
-	width: 45%;
+	margin-top: 1.2rem;
+	padding-block: 12px;
 	max-width: 500px;
 }
-.hero__img {
+.hero__image-img {
 	width: 100%;
 	margin-left: auto;
 }
 
 .hero__title {
-	font-size: 60px;
+	font-size: 37px;
 	font-weight: 500;
-	line-height: 72px;
+	line-height: 48px;
 }
 .hero__subtitle {
+	color: rgba(79, 79, 79, 1);
 	margin-top: 12px;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
-	line-height: 30px;
+	line-height: 28px;
 }
+
 .hero__form {
-	margin-top: 32px;
+	margin-top: 30px;
 }
 .hero__form-group {
 	position: relative;
@@ -147,13 +146,25 @@ img {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-}
-
-/* Container Responsive */
 @media (min-width: 768px) {
 	.container {
 		max-width: 720px;
+	}
+
+	.hero {
+		padding-top: 3rem;
+	}
+	.hero__content {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	.hero__text {
+		width: 48%;
+	}
+	.hero__image {
+		margin-top: 0;
+		width: 45%;
+		max-width: 500px;
 	}
 }
 
@@ -161,16 +172,29 @@ img {
 	.container {
 		max-width: 960px;
 	}
+
+	.hero__title {
+		font-size: 54px;
+		line-height: 64px;
+	}
+	.hero__subtitle {
+		font-size: 20px;
+		line-height: 30px;
+	}
 }
 
 @media (min-width: 1280px) {
 	.container {
 		max-width: 1280px;
-		padding: 0 40px;
+		padding: 0 48px;
+	}
+
+	.logo__img {
+		height: 2.4rem;
 	}
 	.hero__image {
 		width: 45%;
-		max-width: 440px;
+		max-width: 420px;
 	}
 }
 
@@ -179,21 +203,15 @@ img {
 		padding: 0 24px;
 	}
 
-	.logo__img {
-		height: 2.4rem;
-	}
-
 	.hero {
 		padding-top: 4rem;
 	}
-
 	.hero__title {
 		font-size: 60px;
-		font-weight: 500;
 		line-height: 72px;
 	}
 	.hero__image {
 		width: 50%;
-		max-width: 580px;
+		max-width: 570px;
 	}
 }
