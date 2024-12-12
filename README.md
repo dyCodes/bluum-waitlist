@@ -6,9 +6,9 @@
 - **CSS3:** For styling, I followed the BEM (Block, Element, Modifier) methodology.
 
 ## Screenshot
-<div style="display: flex; gap: 10px;align: flex-start">
-  <img src="https://github.com/user-attachments/assets/4ea8ec22-a24e-4f7a-b05a-9404a401c212" alt="desktop-bluum-waitlist" style="width: 60%;">
-  <img src="https://github.com/user-attachments/assets/fc35abf7-b9c4-42e6-8244-ceb56e6c6c42" alt="mobile-bluum-waitlist" style="width: 35%;">
+<div style="display: flex; gap: 10px;">
+   <img src="https://github.com/user-attachments/assets/30b1c1f9-f6df-4913-a3fc-a959d0d2e225" alt="mobile-bluum-waitlist" style="width: 28%;">
+   <img src="https://github.com/user-attachments/assets/3c24598f-ec3e-4beb-9eaa-7c143f38cdbf" alt="desktop-bluum-waitlist" style="width: 70%;">
 </div>
 
 ## File Structure
