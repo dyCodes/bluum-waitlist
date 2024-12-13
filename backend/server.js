@@ -35,6 +35,7 @@ app.post('/subscribe', async (req, res) => {
 		if (error == 'Error: Member Exists') {
 			return res.status(400).json({ error: "Oops! You're already on the waitlist." });
 		}
+		console.log('An error occurred while subscribing to the waitlist:', error);
 		return res.status(500).json({ error: 'An error occurred while subscribing to the waitlist.' });
 	}
 });
