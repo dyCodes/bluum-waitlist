@@ -28,11 +28,18 @@
 							Abroad.
 						</p>
 
-						<form method="post" class="hero__form">
+						<form id="waitlistForm" class="hero__form">
 							<div class="hero__form-group">
-								<input type="email" placeholder="email@address.com" class="hero__form-input" />
+								<input
+									type="email"
+									id="email"
+									required
+									placeholder="email@address.com"
+									class="hero__form-input" />
 								<button type="submit" class="hero__form-button">Join waitlist</button>
 							</div>
+
+							<p id="responseMessage" class="hero__form-message"></p>
 						</form>
 					</div>
 
@@ -45,5 +52,35 @@
 
 		<!-- Main -->
 		<main></main>
+
+		<!-- Scripts -->
+		<script>
+			document.getElementById('waitlistForm').addEventListener('submit', async (e) => {
+				e.preventDefault();
+				const email = document.getElementById('email').value;
+				const responseMessage = document.getElementById('responseMessage');
+
+				// Reset response message
+				responseMessage.textContent = 'Loading...';
+				responseMessage.className = 'hero__form-message show';
+
+				try {
+					const response = await fetch('https://bluum-waitlist-jade.vercel.app/subscribe', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({ email }),
+					});
+
+					const data = await response.json();
+					responseMessage.textContent = data.message || data.error;
+					responseMessage.classList.add('show', data.error ? 'error' : 'success');
+					// Reset form
+					document.getElementById('waitlistForm').reset();
+				} catch (error) {
+					responseMessage.textContent = 'An error occurred. Please try again.';
+					responseMessage.classList.add('show', 'error');
+				}
+			});
+		</script>
 	</body>
 </html>

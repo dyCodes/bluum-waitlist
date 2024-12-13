@@ -54,6 +54,13 @@ button {
 	align-items: center;
 }
 
+.hidden {
+	display: none !important;
+}
+.show {
+	display: block !important;
+}
+
 /* Main styles */
 .header {
 	position: fixed;
@@ -135,13 +142,28 @@ button {
 
 .hero__form-input {
 	width: 100%;
-	padding: 19px 16px;
+	padding: 18px 16px;
 	padding-right: 114px;
 	border: none;
 	border-radius: 8px;
+	font-size: 16px;
 }
 .hero__form-input::placeholder {
 	color: rgba(0, 0, 0, 0.6);
+}
+
+.hero__form-message {
+	display: none;
+	font-size: 16px;
+	padding: 10px 0;
+	font-weight: 500;
+	color: var(--primary-color);
+}
+.hero__form-message.success {
+	color: green;
+}
+.hero__form-message.error {
+	color: red;
 }
 
 .hero__form-button {
